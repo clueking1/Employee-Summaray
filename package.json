@@ -1,0 +1,28 @@
+{
+  "name": "employee-summaray",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clueking1/Employee-Summaray.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clueking1/Employee-Summaray/issues"
+  },
+  "homepage": "https://github.com/clueking1/Employee-Summaray#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "inquirer": "^7.0.4",
+    "jest": "^25.1.0",
+    "path": "^0.12.7"
+  }
+}
