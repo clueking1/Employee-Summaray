@@ -20,7 +20,7 @@ questions = [
         name: 'office',
         message: "What is your manager's office number?",
     }
-  
+
 ]
 
 module.exports = questions

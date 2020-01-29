@@ -20,7 +20,6 @@ questions = [
         name: 'school',
         message: "What is the name of your intern's school?",
     }
-  
 ]
 
 module.exports = questions
