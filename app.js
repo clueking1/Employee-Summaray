@@ -1,8 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const managerQs = require('./roles/ManagerQs.js')
-const eQs = require('./roles/EngineerQs.js')
-const iQs = require('./roles/InternQs.js')
+const managerQs = require('./questions/ManagerQs.js')
+const eQs = require('./questions/EngineerQs.js')
+const iQs = require('./questions/InternQs.js')
 
 
 const Manager = require('./roles/Manager.js')
@@ -22,7 +22,6 @@ function start () {
   )
 
   .then(ans => {
-    console.log(ans.member)
     let answer = ans.member
     let lowerAns = answer.toLowerCase()
     setTimeout(eval(lowerAns), 1) 
@@ -37,17 +36,20 @@ function start () {
       const manager = new Manager(ans.name, ans.id, ans.email, ans.office);
       
       employees.push(manager)
+
     })
-    //const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
+   
     goAgain()
   }
 
   async function engineer () {
     await inquirer.prompt(eQs)
     .then(ans => {
+      
       const engineer = new Engineer(ans.name, ans.id, ans.email, ans.git);
       
       employees.push(engineer)
+
     })
     goAgain()
   }
@@ -55,9 +57,11 @@ function start () {
   async function intern () {
     await inquirer.prompt(iQs)
     .then(ans => {
+      
       const intern = new Intern (ans.name, ans.id, ans.email, ans.school);
       
       employees.push(intern)
+
     })
     goAgain()
   }
